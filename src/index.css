@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Smart Parking Assistant Design System - Dark Tech Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme base colors */
+    --background: 222 14% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 14% 9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 14% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Electric Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 14% 7%;
+    --primary-glow: 217 91% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Dark panels */
+    --secondary: 222 14% 12%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 222 14% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Tech blue */
+    --accent: 217 91% 60%;
+    --accent-foreground: 222 14% 7%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Status colors */
+    --available: 142 69% 58%;
+    --available-glow: 142 69% 68%;
+    --occupied: 0 84% 60%;
+    --occupied-glow: 0 84% 70%;
+    --warning: 45 93% 47%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 222 14% 20%;
+    --input: 222 14% 15%;
+    --ring: 217 91% 60%;
 
-    --radius: 0.5rem;
+    /* Design tokens */
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(222 14% 11%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(222 14% 5%));
+    
+    /* Shadows and glows */
+    --shadow-primary: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-available: 0 0 20px hsl(var(--available) / 0.4);
+    --shadow-occupied: 0 0 20px hsl(var(--occupied) / 0.4);
+    --shadow-card: 0 10px 30px -10px hsl(222 14% 3% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
